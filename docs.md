@@ -1533,9 +1533,11 @@ Returns all threads that belong to actors in a table.
 ***
 
 # Debug
-debug.setname
+## debug.setname
 
+```lua
 <nil> debug.setname(<function> func, <string> name)
+```
 
 Changes the internal name of func. This is used to spoof the output of debug.info(func, "n").
 
