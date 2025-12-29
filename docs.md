@@ -1233,33 +1233,38 @@ Attempts to regenerate the source code from the bytecode of the target. If you p
 
 ## filtergc
 
+```lua
 <table | function | Instance> filtergc(<string> type, <table> options, <boolean?> returnOne)
+```
 
-Fine-tuned search for garbage-collected objects. type can be "function", "table", or "userdata". options is a dictionary of filters (like Name, Constants, etc.). If returnOne is true, it returns the first match instead of a table.
+Fine-tuned search for garbage-collected objects. type can be "function", "table", or "userdata". options is a dictionary of filters (like Name, Constants, etc.). If returnOne is true, it returns the first match instead of a table. Refer to [filtergc](https://docs.sunc.su/Environment/filtergc/)
 
 ## getfunctionhash
 
+```lua
 <string> getfunctionhash(<function> func)
-
+```
 Returns a hex-encoded SHA384 hash of the function’s bytecode. Useful for detecting if a game script has been tampered with or replaced.
 
 ## isfunctionhooked
 
+```lua
 <boolean> isfunctionhooked(<function> func)
-
+```
 Returns whether func has been modified by hookfunction.
 
 ## restorefunction
 
+```lua
 <nil> restorefunction(<function> func)
-
+```
 Restores a hooked function back to its original state. Throws an error if the function wasn't hooked.
 
 ## isnewcclosure
-
+```lua
 <boolean> isnewcclosure(<function> func)
-
-Returns true if the function was created using newcclosure.
+```
+Returns true if the function was created using newcclosure, otherwise it returns false.
 
 ## getgc
 
